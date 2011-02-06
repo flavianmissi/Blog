@@ -16,12 +16,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
-  end
-  
-  def edit
-  end
-
   def update
     @post.update_attributes(params[:post])
     redirect_to posts_path
