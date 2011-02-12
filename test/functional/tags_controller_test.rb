@@ -7,9 +7,13 @@ class TagsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:tags)
   end
 
-  test "Should get new" do
+  test "should get new" do
     get :new
     assert_response :success
     assert_not_nil assigns(:tag)
+  end
+
+  test "if route /posts/x/tags have been set right" do
+    assert_generates "/tags", :controller => "tags", :action => "index"
   end
 end
