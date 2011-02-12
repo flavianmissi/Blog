@@ -1,5 +1,6 @@
 Blog::Application.routes.draw do
   resources :posts
+  resources :tags
 
   get "tags/index"
 
