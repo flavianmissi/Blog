@@ -4,8 +4,10 @@ one:
   name: MyString
   title: MyString
   content: MyText
+  tags: "Computer Science, Vim"
 
 two:
   name: MyString
   title: MyString
   content: MyText
+  tags: "Vim"
