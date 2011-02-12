@@ -1,10 +1,7 @@
 Blog::Application.routes.draw do
-  resources :posts
-  resources :tags
-
-  get "tags/index"
-
-  get "posts/index"
+  resources :posts do
+    resources :tags
+  end
 
   root :to => "posts#index"
   # root :to => "welcome#index"
