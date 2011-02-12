@@ -11,8 +11,25 @@ class TagsController < ApplicationController
     @tag = Tag.new(params[:tag])
     if @tag.save
       flash[:notice] = "Tag saved."
+      redirect_to tags_path
     else
       flash[:notice] = "Tag not saved. Try again later."
+      redirect_to tags_path
+    end
+  end
+
+  def edit
+    @tag = Tag.new
+  end
+
+  def update
+    @tag = Tag.new(params[:tag])
+    if @tag.save
+      flash[:notice] = "Tag updated"
+      redirect_to tags_path
+    else
+      flash[:notice] = "Tag not updated. Try again later"
+      redirect_to tags_path
     end
   end
 
