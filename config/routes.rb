@@ -1,10 +1,11 @@
 Blog::Application.routes.draw do
+  root :to => "posts#index"
+
   resources :posts do
     resources :tags
   end
 
-  root :to => "posts#index"
-  # root :to => "welcome#index"
+  resources :tags
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
