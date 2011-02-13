@@ -1,2 +1,23 @@
-<h1>Tags#index</h1>
-<p>Find me in app/views/tags/index.html.erb</p>
+<h1>Tags</h1>
+
+<table>
+  <thead>
+    <th> Title </th>
+    <th> Actions </th>
+  </thead>
+
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.title %></td>
+        <td><%= link_to "Show", tag_path(tag) %> | 
+          <%= link_to "Edit", edit_tag_path(tag) %> | 
+          <%= link_to 'Destroy', tag, :confirm => 'Are you sure?', :method => :delete %> 
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to "New", new_tag_path %>

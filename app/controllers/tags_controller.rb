@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_filter :find_tag, :only => [:show, :edit, :update]
+
   def index
     @tags = Tag.all
   end
@@ -18,19 +20,14 @@ class TagsController < ApplicationController
     end
   end
 
-  def edit
-    @tag = Tag.new
+  def update
+    @tag.update_attributes(params[:tag])
+    flash[:notice] = "Tag updated"
+    redirect_to tags_path
   end
 
-  def update
-    @tag = Tag.new(params[:tag])
-    if @tag.save
-      flash[:notice] = "Tag updated"
-      redirect_to tags_path
-    else
-      flash[:notice] = "Tag not updated. Try again later"
-      redirect_to tags_path
-    end
+  def find_tag
+    @tag = Tag.find(params[:id])
   end
 
 end
