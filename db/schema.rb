@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110213183121) do
+ActiveRecord::Schema.define(:version => 20110213204736) do
 
   create_table "posts", :force => true do |t|
     t.string   "url"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20110213183121) do
 
   create_table "tags", :force => true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name",       :limit => 70
+    t.string   "surname",    :limit => 70
+    t.string   "username",   :limit => 70
+    t.string   "email",      :limit => 120
+    t.string   "user_type",  :limit => 60
     t.datetime "created_at"
     t.datetime "updated_at"
   end
