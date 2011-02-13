@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110213210704) do
+ActiveRecord::Schema.define(:version => 20110213212704) do
 
   create_table "posts", :force => true do |t|
     t.string   "url"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20110213210704) do
     t.datetime "updated_at"
   end
 
-  create_table "user_types", :force => true do |t|
-    t.string   "type",       :limit => 60
+  create_table "types", :force => true do |t|
+    t.string   "user_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

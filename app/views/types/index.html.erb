@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Type</th>
+    <th>User type</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,7 +10,7 @@
 
 <% @types.each do |type| %>
   <tr>
-    <td><%= type.type %></td>
+    <td><%= type.user_type %></td>
     <td><%= link_to 'Show', type %></td>
     <td><%= link_to 'Edit', edit_type_path(type) %></td>
     <td><%= link_to 'Destroy', type, :confirm => 'Are you sure?', :method => :delete %></td>
