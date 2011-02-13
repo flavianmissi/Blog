@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
+  id: 1
+  url: myurl
   title: MyString
   content: MyText
   tags: "Computer Science, Vim"
 
 two:
-  name: MyString
+  id: 2
+  url: MyString
   title: MyString
   content: MyText
   tags: "Vim"
