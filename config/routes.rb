@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :types
+
   resources :user_types
 
   resources :users
