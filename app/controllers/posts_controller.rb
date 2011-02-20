@@ -13,6 +13,9 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     if @post.save
       redirect_to posts_path
+    else
+      redirect_to new_post_path
+      flash[:notice] = "Your post could not be saved."
     end
   end
 
