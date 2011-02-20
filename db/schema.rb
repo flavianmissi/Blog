@@ -37,11 +37,6 @@ ActiveRecord::Schema.define(:version => 20110220192321) do
     t.datetime "updated_at"
   end
 
-  create_table "types_users", :id => false, :force => true do |t|
-    t.integer "type_id"
-    t.integer "user_id"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "name",       :limit => 70
     t.string   "surname",    :limit => 70
