@@ -8,10 +8,13 @@ development:
   database: blog_dev
   <<: *defaults
 
-test:
+test: &test
   database: blog_test
   <<: *defaults
 
 production:
   database: blog_production
   <<: *defaults
+
+cucumber:
+  <<: *test
