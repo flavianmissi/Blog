@@ -4,6 +4,8 @@ gem 'rails', '3.0.3'
 
 gem 'mysql', :require => 'mysql'
 
+gem 'spork', '~> 0.9.0.rc'
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
