@@ -1,4 +1,4 @@
-class TagsController < ApplicationController
+class TagsCell < Cell::Rails
   before_filter :find_tag, :only => [:show, :edit, :update]
 
   def display
