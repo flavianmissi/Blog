@@ -1,4 +1,5 @@
-require "spec_helper"
+#require "spec_helper"
+require File.expand_path("spec/spec_helper")
 
 describe PostsController do
   fixtures :posts
@@ -30,5 +31,11 @@ describe PostsController do
   it "should delete a post" do
     delete :destroy, :id => @first_post.id.to_param
     response.should redirect_to posts_path
+  end
+
+  it "should find a post given an id or redirect to 404 page" do
+    Post.stub(:find_by_id).and_return(nil)
+    get :show, :id => 1
+    response.should redirect_to(error_path(404))
   end
 end
