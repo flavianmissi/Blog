@@ -3,13 +3,13 @@ first_post:
   title: "My first Post on my blog test"
   url: "my-first-post-on-my-blog-test"
   content: "bla bla bla bla bla"
-  created_at: Time.new
-  updated_at: Time.new
+  created_at: <%= Time.new %>
+  updated_at: <%= Time.new %>
 
 second_post:
   id: 2
   title: "My second Post on my blog test"
   url: "my-second-post-on-my-blog-test"
   content: "bla bla bla bla bla"
-  created_at: Time.new
-  updated_at: Time.new
+  created_at: <%= Time.new %>
+  updated_at: <%= Time.new %>
