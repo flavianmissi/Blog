@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 
+gem 'cells'
+
 gem 'mysql', :require => 'mysql'
 
 gem 'spork', '~> 0.9.0.rc'
@@ -15,6 +17,7 @@ group :test, :development do
 end
 
 group :test do
+  gem "rspec-cells"
   gem "autotest"
   gem "cucumber"
   gem "cucumber-rails"
